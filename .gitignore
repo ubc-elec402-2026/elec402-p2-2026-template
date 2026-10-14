@@ -1,0 +1,36 @@
+# Simulation work libraries
+work/
+*.wlf
+*.vstf
+transcript
+
+# VCD / SAIF (large generated files)
+*.vcd
+*.saif
+
+# Synthesis outputs (submission/outputs/ is submitted, except the large VCD / SAIF / logs)
+/outputs/
+*.dat
+*.db
+*.svf
+!submission/outputs/*.dat
+
+# Genus / QuestaSim temp dirs
+genus.*/
+fv/
+*.log
+*.cmd
+
+# Generated synthesis logs (large, not needed in repo)
+submission/syn_logs/
+
+# Student submission archives
+solution/submissions/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+__pycache__/
+
+.vscode/
