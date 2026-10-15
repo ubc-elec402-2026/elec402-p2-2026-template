@@ -295,6 +295,8 @@ Area target: < 12 000 um^2.
 
 Copy the three templates from `starter/tb/` into `submission/testbench/` and fill in your tests. Each template has clearly marked `TODO` sections.
 
+> **Each testbench must print `ALL PASS` when every check passes** (and must not print it otherwise). `bob.py check` and `bob.py timing` look for that exact text to decide whether the run passed.
+
 ### `rtl_checker.sv` - top module: `mkMultBuff_tb`
 
 Functional RTL simulation. Your testbench must cover:
