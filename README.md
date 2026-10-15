@@ -410,9 +410,36 @@ Reports land in `submission/syn_reports/`, netlists, SDF and the other synthesis
 
 ### Repository setup
 
-- You must be a member of the course **GitHub organization**. If you cannot access it, contact the teaching staff before you start.
-- Your repository must be named **`elec402-p2-2026-<firstname><lastname>`**, all lowercase, with no spaces or separators between the names. For example, a student named Ali Abedian uses `elec402-p2-2026-aliabedian`.
-- Create the repository inside the course organization (not your personal account) and push your work there.
+**We create your repository for you. Do not create one yourself.**
+
+1. **Fill in the Google Form posted on Piazza** with your name, student number and GitHub username.
+2. The teaching staff create a **private** repository for you in the course organization, named **`elec402-p2-2026-<firstname><lastname>`** (all lowercase, for example `elec402-p2-2026-aliabedian`), and give your GitHub account write access to it.
+3. Accept the GitHub invitation if you get one (check your email or `github.com/ubc-elec402-2026`). Then clone your repository and work in it:
+
+   ```bash
+   git clone git@github.com:ubc-elec402-2026/elec402-p2-2026-<firstname><lastname>.git
+   ```
+
+Your repository already contains the starter files. Only the teaching staff can change its settings, so it always stays private. Do not make a copy of it in your personal account or anywhere outside the course organization. Only the repository we create is graded.
+
+#### Starting early from the zip
+
+If your repository has not been created yet, we may give you the starter files as a **zip** so you can start early. Unzip it and work in that folder as usual.
+
+Once your repository exists, connect that folder to it. Run these commands inside the unzipped folder. Your files are kept, and your work is added on top of the starter files already in your repository:
+
+```bash
+git init -b main
+git remote add origin git@github.com:ubc-elec402-2026/elec402-p2-2026-<firstname><lastname>.git
+git fetch origin
+git reset origin/main
+git branch --set-upstream-to=origin/main
+git add -A
+git commit -m "Add my early work"
+git push
+```
+
+`git reset origin/main` only takes over the repository's history. It does not change any file in your folder. After this, keep working in that folder and run the `submit.py` commands below from there.
 
 ### Tagging your submission
 
